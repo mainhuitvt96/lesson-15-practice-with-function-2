@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hàm 2 - Luyện tập 2</title>
+</head>
+<body>
+    <!--Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.-->
+    <!-- <script>
+        let  number = parseInt(prompt('Nhập vào số bạn muốn tính bình phương:'));
+        function square (number){
+            return number*number;
+        }
+        alert(square(number));
+    </script> -->
+
+    <!--Bài 2:  Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được-->
+    <!-- <script>
+        let r = parseInt(prompt('Nhập vào bán kính:'));
+        const PI = 3.14;
+    function dt_tron(r){
+        let s = r*r*PI;
+        return s;
+    }
+    function cv_tron(r){
+        let c = r*2*PI;
+        return c;
+    }
+    document.write(`Diện tích của đường tròn có bán kính ${r} là: ${dt_tron(r)}<br>`);
+    document.write(`Chu vi của đường tròn có bán kính ${r} là: ${cv_tron(r)}<br>`);
+    </script> -->
+
+    <!--Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.-->
+    <!-- <script>
+        //let  number = parseInt(prompt('Nhập vào số bạn muốn tính căn bậc hai:'));
+        // cách 1:
+        // let resut = 1;
+        // function giai_thua(number){
+        //     if(number == 0) {
+        //         return resut;
+        //     }else if( number<0){
+        //         alert(`${number} nhỏ hơn 0, không thỏa điều kiện để tính giai thừa`);
+        //     } else{
+        //         for (let i = 1; i<= number; i++) {
+        //             resut = resut*i;
+        //         }
+        //         return resut;
+        //     }   
+        // }
+        // document.write(`Giai thừa của ${number} là ${giai_thua(number)}`);
+
+        //cách 2: sử dụng hàm: factorial()
+    //     function giai_thua(number){
+    //     if(number == 0) {
+    //             return 1;
+    //         }else if( number<0){
+    //             alert(`${number} nhỏ hơn 0, không thỏa điều kiện để tính giai thừa`);
+    //         } else{
+    //             return number * (giai_thua(number-1));
+    //         }
+    //     }
+    //     document.write(`Giai thừa của ${number} là ${giai_thua(number)}`);
+    // </script> -->
+
+    <!--Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả về false.-->
+    <script>
+        let input = prompt('Vui lòng nhập vào ký tự cần kiểm tra:');
+        let resut;
+        function check_number(input){
+           if(isNaN(input) !== true) { // isNaN() sẽ chuyển đổi tham số truyền vào thành kiểu số sau đó kiểm tra nó
+            return resut = true;
+           } else {
+            return resut = false;
+           }
+        }
+        alert(`Kết quả: ${check_number(input)}`);
+    </script>
+
+    <!--Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.-->
+    <!-- <script>
+        let number;
+        let arr = [];
+        
+        for(let i = 1; i<=3; i++){
+            number = prompt(`Nhập vào số thứ ${i}:`);
+            arr.push(number);
+        }
+
+        function check_min(number){
+            let min = arr[0];
+            for(let i=0; i< arr.length; i++){
+            if(arr[i] < min){
+                min = arr[i];
+            }
+            return min;
+        }
+        }
+  
+        alert(`Giá trị nhỏ nhất trong 3 số (${arr.join(', ')}) là: ${check_min(number)}`);
+    </script> -->
+    <!--Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. 
+        Nếu là nguyên dương trả về true, ngược lại trả về false.-->
+    <!-- <script>
+        let number = parseInt(prompt('Enter number:'));
+        flag = false;
+        function check_number(number){
+            if(number>=0){
+                flag =true;
+                return flag;
+            } else {
+                flag = false;
+                return flag;
+            }
+        }
+        alert(check_number(number));
+    </script> -->
+
+    <!--Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.-->
+        <!-- <script>
+        let number;
+        let arr = [];
+        
+        for(let i = 1; i<=2; i++){
+            number = prompt(`Nhập vào số thứ ${i}:`);
+            arr.push(number);
+        }
+        
+        document.write(`Hai số bạn vừa nhập là: ${arr}<br>`);
+        let newArr = arr.reverse();
+        document.write(`Kết quả sau khi đổi chỗ: ${newArr}`);
+    </script> -->
+    <!--Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó-->
+        <!-- <script>
+        let limit = prompt('Nhập vào số lượng phần tử của mảng');
+        let number;
+        let arr = [];
+        for(let i = 0; i<limit; i++){
+            number = prompt(`Nhập vào số thứ ${i}:`);
+            arr.push(number);
+        }
+
+        document.write(`Mảng bạn vừa nhập là: ${arr}<br>`);
+        document.write(`Kết quả sau khi đổi đảo ngược: ${arr.reverse(number)}`);
+        </script> -->
+    <!--Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. 
+        Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.-->
+        <!-- <script>
+            let arr = ['a', 'b', 'c', 'd', 'e', 'f', 'G', 'H','a','c',];
+            let character = prompt('Nhập vào một ký tự:');
+            let count = 0;
+            
+            function check(character) {
+
+                for(let i =0; i< arr.length; i++){
+                  if(arr[i] == character) {
+                    count += 1;
+                } 
+            }
+                if(count > 0) {
+                    alert(`Ký tự ${character} thuộc mảng (${arr.join(', ')}). Số lần xuất hiện là: ${count}`);
+                    return count;
+                }
+                else {
+                    alert(`Không có ký tự ${character} trong mảng (${arr.join(', ')}).`)
+                    return -1;
+                }
+            }
+            check(character);    
+        </script> -->
+</body>
+</html>
